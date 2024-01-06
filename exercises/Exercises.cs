@@ -2,6 +2,24 @@ namespace excercises;
 
 public class Exercises()
 {
+
+    public static int GetValue()
+    {
+        var input = Console.ReadLine();
+        int number;
+
+        bool isNumber = int.TryParse(input, out number);
+
+        if (!isNumber)
+        {
+            System.Console.WriteLine("Invalid Number");
+            return 0;
+        }
+
+        return number;
+
+    }
+
     /*
     Write a program and ask the user to enter a number. The number should be between 1 to 10. 
     If the user enters a valid number, display "Valid" on the console. 
@@ -11,15 +29,7 @@ public class Exercises()
     public static void CheckValue()
     {
         System.Console.WriteLine("Please enter a number between 1 and 10:");
-        var input = Console.ReadLine();
-        int number;
-
-        bool isNumber = int.TryParse(input, out number);
-        if (!isNumber)
-        {
-            System.Console.WriteLine("Invalid");
-            return;
-        }
+        int number = GetValue();
 
         bool rangeCondition = number > 0 && number <= 10;
         if (!rangeCondition)

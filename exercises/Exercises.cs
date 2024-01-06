@@ -50,15 +50,11 @@ public class Exercises()
     {
 
         Console.WriteLine("Enter first number:");
-        var input1 = Console.ReadLine();
-        int number1;
-        bool isNumber1 = int.TryParse(input1, out number1);
+        int number1 = GetValue();
 
 
         Console.WriteLine("Enter second number:");
-        var input2 = Console.ReadLine();
-        int number2;
-        bool isNumber2 = int.TryParse(input2, out number2);
+        int number2 = GetValue();
 
         var maxNumber = number1 > number2 ? number1 : number2;
         System.Console.WriteLine("The maximum number is {0}", maxNumber);

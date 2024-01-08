@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Exercises2.EnterNumbers();
+        Exercises2.ComputeFactorial();
     }
 }
 

@@ -1,3 +1,5 @@
+using System.Diagnostics.SymbolStore;
+
 namespace excercises;
 
 public class Exercises2()
@@ -44,5 +46,36 @@ public class Exercises2()
                 System.Console.WriteLine("Total is: {0}", sum);
             }
         }
+    }
+
+    /*
+    3- Write a program and ask the user to enter a number. 
+    Compute the factorial of the number and print it on the console. 
+    For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+    */
+    public static void ComputeFactorial()
+    {
+        var input = "";
+        int number;
+        System.Console.WriteLine("Enter a number to find it's factorial");
+        input = Console.ReadLine();
+
+        bool isNumber = int.TryParse(input, out number);
+
+        if (!isNumber)
+        {
+            return;
+        }
+
+        int result = 1;
+        int originalNumber = number;
+        while (number > 0)
+        {
+
+            result = number * result;
+            number--;
+        }
+
+        System.Console.WriteLine("{0}! = {1}", originalNumber, result);
     }
 }

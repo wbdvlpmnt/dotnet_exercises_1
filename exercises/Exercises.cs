@@ -1,6 +1,6 @@
 namespace excercises;
 
-public class Exercises()
+public class Exercises1()
 {
 
     public static int GetValue()

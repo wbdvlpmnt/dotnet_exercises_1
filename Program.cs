@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Exercises.SpeedCamera();
+        Exercises1.SpeedCamera();
     }
 }
 
